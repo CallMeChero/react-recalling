@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 function App() {
 
-  const [modalIsVisible, setModalIsVisible] = useState(true);
+  const [modalIsVisible, setModalIsVisible] = useState(false);
 
   function showModalHandler() {
     setModalIsVisible(true)
