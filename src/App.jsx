@@ -13,7 +13,7 @@ function App() {
   function hideModalHandler() {
     setModalIsVisible(false)
   }
-  console.log(modalIsVisible)
+  
   return (
     <>
       <MainHeader onShowModal={ showModalHandler }/>
