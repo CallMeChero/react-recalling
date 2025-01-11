@@ -1,10 +1,10 @@
 import Post from './Post';
-import NewPost from './NewPost';
+import NewPost from '../routes/NewPost';
 import classes from './PostList.module.css';
 import Modal from './Modal';
 import { useState, useEffect } from 'react';
 
-function PostList({onHideModal, modalIsVisible}) {
+function PostList() {
 
     const [posts, setPosts] = useState([]);
     const [isFetching, setIsFetching] = useState(false);
@@ -51,11 +51,6 @@ function PostList({onHideModal, modalIsVisible}) {
 
     return (
         <>
-            { modalIsVisible 
-                && <Modal onClose={onHideModal}>
-                    <NewPost onCancel={onHideModal} onAddPost={addPostHandler}/>
-                </Modal>
-            }
             { !isFetching && posts.length && (
                 <ul className={classes.posts}>
                     { posts.map((post) => <Post key={post.author} author={post.author} body={post.body} />) }
