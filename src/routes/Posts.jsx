@@ -1,6 +1,5 @@
 import { Outlet } from 'react-router-dom';
 import PostList from '../components/PostList';
-import { useState } from 'react';
 
 function Posts() {
 
